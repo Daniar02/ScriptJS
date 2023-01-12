@@ -48,24 +48,56 @@
 // // ЗДЕСЬ БУДЕТЬ ВАШ КЛЮЧЬ, ЭТОТ КЛЮЧЬ МОЖЕТЬ НЕ РАБОТАТЬ
 // const _apikey = 'ápikey-d4eecbec66dedb fae4eab45d312fc1df';
 
-// ######################################## Классификация типов данных в JavaScript ######################################## 
 
-let number = 4;
-console.log(4/0); // Infinity
-console.log('string' * 9); // NaN
-const persone = `1`; //  (1 число)-('' страка)
-const  bool = false;
-console.log(); 
-// console.log(something); NaN
-let und;
-console.log(und); //undefined
+// ######################################## Классификация типов данных в JS ########################################
+// let number = 4; // (число)
+// console.log(4/0); // Infinity
+// console.log('string' * 9); // NaN 
+// const persone = `1`; //  (1 число)-('' страка)
+// const  bool = false;
+// console.log(); // (error)
+// // console.log(something); NaN
+// let und;
+// console.log(und); //undefined
 
-const obj = {
-    Name: 'john',
-    age: 20,
-    isMarried: false
-};
-console.log(obj.Name); // (.[])
-                //0             1      2       3       4   5
-const arr = ['plum.png', 'orange.jpg', 6, 'aple.bmp', {}, [] ];
-console.log(arr[1]);
+// const obj = {    // объект
+//     Name: 'john',    // под ключом "name" хранится значение "John"
+//     age: 20, //  под ключом "age" хранится значение 30
+//     isMarried: false
+// };
+// console.log(obj.Name); // (.[""])
+//                 //0             1      2       3       4   5
+// const arr = ['plum.png', 'orange.jpg', 6, 'aple.bmp', {}, [] ];
+// console.log(arr[1]);
+
+// ######################################## Разница между объектами и массивами и неочевидные синтаксические возможности  ########################################
+// const arr = ["a", "b", "c"]; // (Массив)
+// arr[10] = "3456";
+// console.log(arr);
+// const arrObj = {
+//     a: "a",
+//     "1": "b",
+//     2: "c",
+//     abc: {
+//         df: [{}, {}],
+//         def: {
+//             d:21
+//         }
+//     }
+// };
+// console.log(arrObj.abc.def.d);
+
+// const b = "b";
+// // arrObj.b = "1234";
+// arrObj[b] = "1234";
+// console.log(arrObj["b"]);
+// console.log(arrObj.b);
+// console.log(arrObj[1]);
+
+// // const obj = {a: 1, b: 2, c: 3}; // синтаксис "литерал объекта"
+// const obj = {
+//     "Anna": 500,
+//     "alex": 400
+// };
+// // console.log(obj.alex);
+// // let user = new Object(); // синтаксис "конструктор объекта"
