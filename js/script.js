@@ -117,3 +117,32 @@
 // answers[2] = prompt("Сколько вам лет?", "");
 // document.write(answers);
 // console.log(typeof(answers));
+
+// ################################################ Интерполяция (ES6) ################################################
+// const category = "toys";
+// console.log('https://somerl.com/' + category + "/" + "4");
+// console.log(`https://somerl.com/${category}/4`);
+
+// const user = "Ivan";
+// alert(`Привет:${user}`);
+
+// ################################################## Операторы в JS ##################################################
+// console.log("arr" + " - object");
+// console.log(4 + " - object");
+// console.log("object - " + 4);
+// console.log(4 + "5");
+
+// let incr = 10, // (инкремент) (= присваивание)
+//     decr = 10; // (декремент)
+// // ++incr;
+// // decr--;
+// console.log(++incr);
+// console.log(decr--);
+// console.log(2 + 2 * 2 !== "6"); // (== равенства) (=== Строгое равенство)
+
+// // && (true - true = true а все остальныйе false)
+// // || (false - false = false а все остальныйе true)
+// const isChecked = false,
+//       isClose = false;
+// console.log(isChecked || !isClose);
+
