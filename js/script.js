@@ -70,7 +70,7 @@
 // const arr = ['plum.png', 'orange.jpg', 6, 'aple.bmp', {}, [] ];
 // console.log(arr[1]);
 
-// ######################################## Разница между объектами и массивами и неочевидные синтаксические возможности  ########################################
+// ################### Разница между объектами и массивами и неочевидные синтаксические возможности ###################
 // const arr = ["a", "b", "c"]; // (Массив)
 // arr[10] = "3456";
 // console.log(arr);
@@ -180,20 +180,103 @@
 
 Проверить, чтобы все работало без ошибок в консоли */
 
-const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+// const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+//     //boolean-(булевая значение) true(истина) false(ложь)
+// };
+// const a = prompt('Один из последних просмотренных фильмов?', ""),
+//       b = prompt('На сколько оцените его?', ""),
+//       c = prompt('Один из последних просмотренных фильмов?', ""),
+//       d = prompt('На сколько оцените его?', "");
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = d;
+// console.log(personalMovieDB);
 
-};
-const a = prompt('Один из последних просмотренных фильмов?', ""),
-      b = prompt('На сколько оцените его?', ""),
-      c = prompt('Один из последних просмотренных фильмов?', ""),
-      d = prompt('На сколько оцените его?', "");
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-console.log(personalMovieDB);
+// ##################################################### Условия. #####################################################
+
+// if (2 == "2") {
+//     console.log("Ok!");
+// } else {
+//     console.log("error");
+// }
+
+// const num = 50;
+// if (num < 49) {
+//     console.log("error");
+// } else if (num > 100) {
+//     console.log("Много");
+// } else {
+//     console.log("Ok!");
+// }
+
+// //  Тернарный оператор
+// // (1-Оргумент)    (2-Оргумент)         (3-Оргумент)
+// (num === "50") ? console.log("Ok!") : console.log("error");
+
+// // Switch
+// // это условный оператор, который сравнивает выражение сразу с несколькими возможными вариантами и выполнять
+// // один || несколькоблоков кода на основе обнаруженных соответствий. Оператор switch по сути может заменить 
+// // несколько блоков else if.
+
+// switch (num) {
+//     case 49:
+//         console.log("Неверно");
+//         break;
+//     case 100:
+//         console.log("Неверно");
+//         break;
+//     case 50:
+//         console.log("Вы точку");
+//         break;
+//     default:
+//         console.log('Не в этот раз');
+//         break;
+// }
+
+// ############################################# Логические операторы #############################################
+// const hamburger = 5;
+// const fries = null;
+
+// if (hamburger && fries) {
+//     console.log("Я сыть!");
+// }
+// console.log((hamburger && fries));
+
+// const hamburger = 3;
+// const fries = 1;
+// const cola = 0;
+// console.log((hamburger === 3 && cola && fries));
+
+// console.log(1 && 0);
+// console.log(1 && 5);
+// console.log(null && 5);
+// console.log(0 && "dssd");
+// if (hamburger === 3 && cola && fries) {
+//     console.log("Все сыты!");
+// } else {
+//     console.log("Мы уходим");
+// }
+
+const hamburger = 3;
+const fries = 3;
+const cola = 0;
+const nuggets = 2;
+// console.log((hamburger === 3 && cola && fries));
+
+if (hamburger === 3 && (cola === 2 || fries === 3) && nuggets) {
+    console.log("Все сыты!");
+} else {
+    console.log("Мы уходим");
+}
+console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets);
+console.log(!0);
+// console.log((hamburger || cola || fries));
+
+// let johnReport, alexReport, samReport, mariaReport = "done";
+// console.log(johnReport || alexReport || samReport || mariaReport);
