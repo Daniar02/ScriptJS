@@ -360,3 +360,54 @@
 //     resultArray.push(arr[i]);
 // }
 // console.log(resultArray.join(" "));
+// ############################################# Цикл в цикле и метки #############################################
+
+// for (let i = 0; i < 3; i++) {
+//     console.log(i);
+//     for (let j = 0; j < 3; j++) {
+//         console.log(j);
+//     }
+// }
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+//  let result = "";
+//  const lengtH = 7;
+// for (let i = 1; i < lengtH; i++) {
+//     for (let j = 0; j < i; j++) {
+//         result+= "*";
+//     }
+//     result+= "\n";
+// }
+// console.log(result);
+
+// first: for (let i = 0; i < 3; i++) {
+//     console.log(`First level: ${i}`);
+//     for (let j = 0; j < 3; j++) {
+//         console.log(`Second level: ${j}`);
+//         for (let k = 0; k < 3; k++) {
+//             if (k === 2) continue first;
+//             console.log(`Third level: ${k}`);
+//         }
+//     }
+// }
+
+// for (let i = 1; i < 5; i++) {
+//     console.log(`Отец ${i}`);
+//     for (let j = 1; j < 5; j++) {
+//         console.log(`Сын ${j}`);
+//     }
+//     for (let k = 1; k < 5; k++) {
+//         console.log(`Малыш ${k}`);
+//     }
+// }
+
+// const tasks = [[1, 'Отец 1'], [2, 'Отец 2']];
+// for (let i = 0; i < tasks.length; i++) {
+//     for (let j = 0; j < tasks[i].length; j++) {
+//         console.log(tasks[i][j]);
+//     }
+// }
