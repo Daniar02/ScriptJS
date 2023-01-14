@@ -429,34 +429,66 @@
 
 
 // Код возьмите из предыдущего домашнего задания
-const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
+// const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-for (let i = 0; i < 2; i++) {
-    const a = prompt('Один из последних просмотренных фильмов?', ""),
-          b = prompt('На сколько оцените его?', "");
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+// for (let i = 0; i < 2; i++) {
+//     const a = prompt('Один из последних просмотренных фильмов?', ""),
+//           b = prompt('На сколько оцените его?', "");
 
-    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-        console.log('Сделано');
-    } else {
-        console.log('error');
-        i--;
-    }
-}
-if (personalMovieDB.count < 10 && personalMovieDB.count != '' ) {
-    console.log("Просмотрено довольно мало фильмов");
-} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
-    console.log("Вы классический зритель");
-} else if (personalMovieDB.count >= 30) {
-    console.log("Вы киноман");
-} else {
-    console.log("Произошла ошибка");
-}
-console.log(personalMovieDB);
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('Сделано');
+//     } else {
+//         console.log('error');
+//         i--;
+//     }
+// }
+// if (personalMovieDB.count < 10 && personalMovieDB.count != '' ) {
+//     console.log("Просмотрено довольно мало фильмов");
+// } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+//     console.log("Вы классический зритель");
+// } else if (personalMovieDB.count >= 30) {
+//     console.log("Вы киноман");
+// } else {
+//     console.log("Произошла ошибка");
+// }
+// console.log(personalMovieDB);
+
+// ##################################### JavaScript Решает #####################################
+// Вывести число от 4 до 400 на экран
+// let out = document.getElementById('out');
+// let tmp = "";
+// for (let i = 4; i < 400; i++) {
+//     tmp = tmp + i + ' ';
+// }
+
+// Вывести число в последовательности 4 7 10 13 с помозщью цикла
+// for (let i = 4; i <= 13; i=i+3) {
+//     tmp = tmp + i + ' ';
+// }
+
+// Вывести число 654 653 652 до нуля.
+// for (let i = 654; i >= 652; i=i-1) {
+//     tmp = tmp + i + '<br>';
+// }
+
+// С помощью цикла напечатайте таблицу умножения на 5 от 1 до 9
+// for (let i = 0; i <= 9; i=i+1) {
+//     tmp = tmp + 5 + '*' + i + '=' + 5 * i + '<br>';
+// }
+
+// Выведите с помощью цикла спецсимволов от 1000 до 2000 Напомню что спецсимвол
+// получается комбинацией &# число; например &#1222
+// for (let i = 7000; i <= 10000; i=i+1) {
+//     tmp = tmp + '&#' + i + ' ';
+// }
+
+// out.innerHTML = tmp;
+
