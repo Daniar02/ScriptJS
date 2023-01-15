@@ -492,3 +492,94 @@
 
 // out.innerHTML = tmp;
 
+// ##################################### Циклы FOR и WHILE в JavaScript Фрилансер #####################################
+// let num = 0;
+// while (num <= 5) {
+//     console.log(num);
+//     num++;
+// }
+
+// while (num) {
+//     console.log(num);
+//     num--;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// } while (num < 5);
+
+// let num = 0;
+// for (; num < 5; num++) {
+//     console.log(num);
+//     if (num == 2) {
+//         break;
+//     }
+// }
+// console.log(`Робото окончено в, num =${num}`);
+
+// let num = 0;
+// for (; num < 5; num++) {
+//     if (num == 2) {
+//         continue;
+//     }
+//     console.log(num);
+// }
+
+// firstFor: for (let num = 0; num < 2; num++) {
+//     for (let size = 0; size < 3; size++) {
+//         if (size == 2) {
+//             continue firstFor;
+//         }
+//         console.log(size);
+//     }
+// }
+
+// while - Проверяет условие перед каждой итерацией.
+// do..whilem - Проверяет условие после каждой итерации.
+// for (;;) - Проверяет условие перед каждой  итерацией,
+//            есть возможность задать дополнительные настройки.
+
+// Циклы использование while do while
+// let num = 0;
+// while (num <= 5) {
+//     console.log(num);
+//     num++;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// } while (num <= 5);
+
+// let num = 8;
+// while (num >= 0) {
+//     console.log(num);
+//     num--;
+// }
+
+// Циклы использование while do while
+// for (let num = 0; num < 3; num++) {
+//     console.log(`Число ${num}`);
+// }
+
+// let num = 0;
+// while (num < 3) {
+//     console.log(`Число ${num}`);
+//     num++;
+// }
+
+// do {
+//     console.log(`Число ${num}`);
+//     num++;
+// } while (num < 3);
+
+// for (let i = 0; i < 2; i++) {
+//     console.log(`Отец ${i}`);
+//     for (let j = 0; j < 3; j++) {
+//         if (j == 1) {
+//             break
+//         }
+//         console.log(`Сын ${j}`);
+//     }
+// }
