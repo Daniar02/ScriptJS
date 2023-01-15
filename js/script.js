@@ -583,3 +583,25 @@
 //         console.log(`Сын ${j}`);
 //     }
 // }
+
+// ##################################### Вложенные циклы JS Таблица #####################################
+// let out = document.querySelector('#out');
+// console.log(out);
+// // for (let i = 1; i < 10; i++) {
+// //     for (let j = 0; j < i; j++) {
+// //         out.innerHTML += "*";
+// //     }
+// //     out.innerHTML += "<br>";
+// // }
+
+// // for (let i = 1; i <= 10; i++) {
+// //     // out.innerHTML += "3" + "+" + i + "=" + (i + 3)+ "<br>"; 
+// //     out.innerHTML += `3*${i}=${3 * i} <br>`;
+// // }
+
+// for (let i = 1; i <= 10; i++) {
+//     for (let j = 1; j <= 10; j++) {
+//         out.innerHTML += `${i}*${j}=${i * j}<br>`;
+//     }
+//     out.innerHTML += '<hr>';
+// }
