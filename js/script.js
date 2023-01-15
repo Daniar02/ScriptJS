@@ -594,14 +594,58 @@
 // //     out.innerHTML += "<br>";
 // // }
 
-// // for (let i = 1; i <= 10; i++) {
-// //     // out.innerHTML += "3" + "+" + i + "=" + (i + 3)+ "<br>"; 
-// //     out.innerHTML += `3*${i}=${3 * i} <br>`;
-// // }
+// for (let i = 1; i <= 10; i++) {
+//     // out.innerHTML += "3" + "+" + i + "=" + (i + 3)+ "<br>"; 
+//     out.innerHTML += `3*${i}=${3 * i} <br>`;
+// }
 
 // for (let i = 1; i <= 10; i++) {
 //     for (let j = 1; j <= 10; j++) {
 //         out.innerHTML += `${i}*${j}=${i * j}<br>`;
 //     }
 //     out.innerHTML += '<hr>';
+// }
+
+// ##################################### Домащняя работа циклы JS Таблица #####################################
+// let num = prompt('ЧИСЛО'),
+//     num1 = prompt('КОНЕЦ');
+// // while (num < num1) {
+// //     console.log(num);
+// //     num++;
+// // }
+// for (num; num <= num1; num++) {
+//     console.log(num);
+// }
+
+// const arr = [1, 4, 7, 8];
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 5) {
+//         continue;
+//     }
+//     console.log(arr[i]);
+// }
+
+// let i = 0;
+// while (arr[i] <= 5 && i < arr.length) {
+//     console.log(arr[i]);
+//     i++;
+// }
+
+// let j = 0;
+// do {
+//     console.log(j);
+//     j++;
+// } while (j < 0);
+
+// const arr = [1, 4, 7, 8];
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let element of arr) {
+//     console.log(element);
+// }
+
+// for (let index in arr) {
+//     console.log(arr[index]); //arr[index]
 // }
