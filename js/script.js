@@ -809,3 +809,35 @@
 // function doNothing() {}
 // console.log(doNothing() === undefined);
 
+// ############################## Домашняя работа toUpperCase, toString().slice(-1) ##############################
+// const res = prompt("Введите имя");
+// const i = res.toUpperCase();
+// console.log(i);
+
+// function userUpper(text) {
+//     let res = text.toUpperCase();
+//     return res;
+// }
+// console.log(userUpper("nursultan"));
+
+
+// function sum(num, sum, um) {
+//     return num + sum + um;
+// }
+// console.log(sum(1, 2, 3));
+// const nameA = 'adilet';
+// const res = nameA.toString().slice(-1);
+// const res2 = nameA[0];
+
+// console.log(res);
+// console.log(res2);
+
+// function gen(name) {
+//     const res = name[0];
+//     const res2 = name.slice(-1);
+//     const res3 = res + res2;
+//     return res3;
+// }
+
+
+// console.log(gen('adilet'));
