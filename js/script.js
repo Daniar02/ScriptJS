@@ -705,3 +705,69 @@
     
 // };
 // console.log(calc(2, 3));
+
+// ##################################### Домашняя работа  Функции #####################################
+// function showMessage() {
+//   alert( 'Всем привет!' );
+// }
+
+// showMessage();
+// showMessage();
+
+// function showMessage() {
+//     let message = "Привет, я JavaScript!"; // локальная переменная
+  
+//     alert( message );
+//   }
+  
+//   showMessage(); // Привет, я JavaScript!
+  
+//   alert( message ); // <-- будет ошибка, т.к. переменная видна только внутри функции
+
+// let userName = 'Вася';
+// function showMessage() {
+//     let message = 'Привет ' + userName;
+//     alert(message);
+// }
+// showMessage();
+
+// let userName = 'Вася';
+// function showMessage() {
+//     let userName = 'Петя'; // (1) изменяем значение внешней переменной
+//     let message = 'Привет, ' + userName;
+//     alert(message);
+// }
+// alert(userName); // Вася перед вызовом функции
+// alert(userName);
+// showMessage(); // Петя, значение внешней переменной было изменено функцией
+
+// function showMessage(from, text) { // параметры: from, text
+//     alert(from + ':' + text);
+// }
+// showMessage('Аня', 'Привет'); // Аня: Привет! (*)
+// showMessage('Аня', 'Как дела'); // Аня: Как дела? (**)
+
+// function showMessage(from, text) {
+//     from = '*' + from + '*'; // немного украсим "from"
+//     alert(from + ': ' + text);
+// }
+
+// let from = 'Аня';
+// showMessage(from, 'Привет'); // *Аня*: Привет
+// значение "from" осталось прежним, функция изменила значение локальной переменной
+// alert(from); // Аня
+
+// функции
+// function toPower(num, power) {
+//     const res = num + power;
+//     return res;
+// }
+// console.log(toPower(4, 6));
+// // Стрелочный функции 
+// const toPowerArrow = (num, power) => num + power;
+// console.log(toPowerArrow(4, 6));
+
+// function showMessage(from, text="Текст не дабавлен") {
+//     alert(from + ":" + text);
+// }
+// showMessage('Аня'); // Аня: текст не добавлен
