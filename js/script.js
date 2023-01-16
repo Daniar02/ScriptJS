@@ -649,3 +649,59 @@
 // for (let index in arr) {
 //     console.log(arr[index]); //arr[index]
 // }
+
+// ##################################### Функции, стрелочные ф-ции #####################################
+
+// FUNCTION DECLARATION
+// Создается до начала выполнения скрипта,можно вызвать перед объявлением
+// function showFirstMessage() {
+//     console.log('Hello World');
+// }
+// showFirstMessage();
+
+// function showFirstMessage(text) {
+//     console.log(text);
+// }
+// showFirstMessage('Hello World');
+
+// let num = 20;
+// function showFirstMessage(text) {
+//     console.log(text);
+//     // let num = 10;
+//     // num = 12;
+//     console.log(num);
+// }
+// showFirstMessage('Hello World');
+// console.log(num);
+
+// function calc(a, b) {
+//     return (a + b);
+// }
+// console.log(calc(4, 3));
+// console.log(calc(5, 6));
+// console.log(calc(10, 6));
+
+// function ret() {
+//     let num = 50;
+//     //
+//     return num;
+// }
+// const anotherNum = ret();
+// console.log(anotherNum);
+
+// FUNCTION EXPRESSION
+// Создается только тогда, когда доходит поток кода,можно вызвать только после объявления.
+// const logger = function() {
+//     console.log("Hello");
+// };
+// logger();
+
+// СТРЕЛОЧНЫЕ ФУНКЦИИ
+// Не имеет своего контекста (this)
+// const calc = (a, b) => a + b;
+// const calc = (a, b) => {
+
+//     return (a + b);
+    
+// };
+// console.log(calc(2, 3));
