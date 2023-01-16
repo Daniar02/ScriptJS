@@ -771,3 +771,41 @@
 //     alert(from + ":" + text);
 // }
 // showMessage('Аня'); // Аня: текст не добавлен
+
+// ##################################### Еще раз про аргументы функций #####################################
+// const usdCurr = 28;
+// const eurCurr = 32;
+// function convert(amount, curr) {
+//     console.log(curr * amount);
+// }
+// convert(500, usdCurr);
+// convert(500, eurCurr);
+
+// ##################################### Про важность return #####################################
+// const usdCurr = 28;
+// const discount = 0.9;
+// function convert(amount, cur) {
+//     return cur * amount;
+// }
+
+// function promation(result) {
+//     console.log(result * discount);
+// }
+
+// // const res = convert(500, usdCurr);
+// promation(convert(500, usdCurr));
+
+// function test() {
+//     for (let i = 0; i < 5; i++) {
+//         console.log(i);
+//         if (i === 5) {
+//             return;
+//         }
+//     }
+//     console.log('Done');
+// }
+// test();
+
+// function doNothing() {}
+// console.log(doNothing() === undefined);
+
