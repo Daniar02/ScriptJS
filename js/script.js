@@ -841,3 +841,34 @@
 
 
 // console.log(gen('adilet'));
+
+// ############################## Методы и свойства строк и чисел ##############################
+// length
+const str = 'text';
+console.log(str.length);
+
+const arr = [1, 2, 3];
+console.log(arr.length);
+
+const str1 = 'text';
+console.log(str1[0] + str1[3]);
+
+const str2 = 'text';
+console.log(str2.toUpperCase());
+console.log(str2.toLocaleLowerCase());
+
+const fruit = 'Some Fruit';
+console.log(fruit.indexOf('Fruit'));
+
+const logg = 'Hello World';
+console.log(logg.slice(6, 11));
+console.log(logg.substring(6, 11));
+console.log(logg.substr(6, 5));
+
+const num = 12.2;
+console.log(Math.round(num));
+
+const test = '12.2px';
+console.log(parseInt(test));
+console.log(parseFloat(test));
+
