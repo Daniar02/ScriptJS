@@ -844,31 +844,111 @@
 
 // ############################## Методы и свойства строк и чисел ##############################
 // length
-const str = 'text';
-console.log(str.length);
+// const str = 'text';
+// console.log(str.length);
 
-const arr = [1, 2, 3];
-console.log(arr.length);
+// const arr = [1, 2, 3];
+// console.log(arr.length);
 
-const str1 = 'text';
-console.log(str1[0] + str1[3]);
+// const str1 = 'text';
+// console.log(str1[0] + str1[3]);
 
-const str2 = 'text';
-console.log(str2.toUpperCase());
-console.log(str2.toLocaleLowerCase());
+// const str2 = 'text';
+// console.log(str2.toUpperCase());
+// console.log(str2.toLocaleLowerCase());
 
-const fruit = 'Some Fruit';
-console.log(fruit.indexOf('Fruit'));
+// const fruit = 'Some Fruit';
+// console.log(fruit.indexOf('Fruit'));
 
-const logg = 'Hello World';
-console.log(logg.slice(6, 11));
-console.log(logg.substring(6, 11));
-console.log(logg.substr(6, 5));
+// const logg = 'Hello World';
+// console.log(logg.slice(6, 11));
+// console.log(logg.substring(6, 11));
+// console.log(logg.substr(6, 5));
 
-const num = 12.2;
-console.log(Math.round(num));
+// const num = 12.2;
+// console.log(Math.round(num));
 
-const test = '12.2px';
-console.log(parseInt(test));
-console.log(parseFloat(test));
+// const test = '12.2px';
+// console.log(parseInt(test));
+// console.log(parseFloat(test));
+
+// ############################## Практика , ч3. Используем функции ##############################
+/* Задание на урок:
+
+1) Первую часть задания повторить по уроку
+
+2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
+false - выводит в консоль главный объект программы
+
+3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 
+"Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
+genres
+
+P.S. Функции вызывать не обязательно*/
+
+// Код возьмите из предыдущего домашнего задания
+
+let numberOfFilms;
+function start() {
+    numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+
+    while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+    }
+}
+start();
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+function remeberMyFilms() {
+    for (let i = 0; i < 2; i++) {
+        let a = prompt('Один из последних просмотренных фильмов?'),
+            b = prompt('На сколько оцените его?');
+         if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+             personalMovieDB.movies[a] = b;
+             console.log('Done');
+         } else {
+             console.log('error');
+             i--;
+         } 
+     }
+}
+remeberMyFilms();
+
+function detectPersonalLevel() {
+    if (personalMovieDB.count < 10) {
+        console.log("Просмотрено довольно мало фильмов");
+    } else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
+        console.log("Вы классический зритель");
+    } else if (personalMovieDB.count >= 30 ) {
+        console.log("Вы киноман");
+    } else {
+        console.log("Произошла ошибка");
+    }
+}
+detectPersonalLevel();
+
+function showMyDB(hidden) {
+    if (!hidden) {
+        console.log(personalMovieDB);
+    }
+}
+
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        const genre = prompt(`Ваш любимый жанр под номером ${i}`);
+        personalMovieDB.genres[i - 1] = genre;
+    }
+
+}
+writeYourGenres();
+showMyDB(personalMovieDB.privat);
+
+
 
