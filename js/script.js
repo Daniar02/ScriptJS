@@ -888,67 +888,94 @@ P.S. Функции вызывать не обязательно*/
 
 // Код возьмите из предыдущего домашнего задания
 
-let numberOfFilms;
-function start() {
-    numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+// let numberOfFilms;
+// function start() {
+//     numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?').trim();
 
-    while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
-    }
+//     while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+//         numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
+//     }
+// }
+// start();
+
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+
+// function remeberMyFilms() {
+//     for (let i = 0; i < 2; i++) {
+//         let a = prompt('Один из последних просмотренных фильмов?').trim(),
+//             b = prompt('На сколько оцените его?');
+//          if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//              personalMovieDB.movies[a] = b;
+//              console.log('Done');
+//          } else {
+//              console.log('error');
+//              i--;
+//          } 
+//      }
+// }
+// remeberMyFilms();
+
+// function detectPersonalLevel() {
+//     if (personalMovieDB.count < 10) {
+//         console.log("Просмотрено довольно мало фильмов");
+//     } else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
+//         console.log("Вы классический зритель");
+//     } else if (personalMovieDB.count >= 30 ) {
+//         console.log("Вы киноман");
+//     } else {
+//         console.log("Произошла ошибка");
+//     }
+// }
+// detectPersonalLevel();
+
+// function showMyDB(hidden) {
+//     if (!hidden) {
+//         console.log(personalMovieDB);
+//     }
+// }
+
+// function writeYourGenres() {
+//     for (let i = 1; i <= 3; i++) {
+//         const genre = prompt(`Ваш любимый жанр под номером ${i}`);
+//         personalMovieDB.genres[i - 1] = genre;
+//     }
+
+// }
+// writeYourGenres();
+// showMyDB(personalMovieDB.privat);
+
+
+// ############################################### Callback- функции ###############################################
+function first() {
+    // Do sщmething(Сделай что-нибудь)
+    setTimeout(function() {
+        console.log(1);
+    },500);
 }
-start();
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-
-function remeberMyFilms() {
-    for (let i = 0; i < 2; i++) {
-        let a = prompt('Один из последних просмотренных фильмов?'),
-            b = prompt('На сколько оцените его?');
-         if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-             personalMovieDB.movies[a] = b;
-             console.log('Done');
-         } else {
-             console.log('error');
-             i--;
-         } 
-     }
+function Second() {
+    console.log(2);
 }
-remeberMyFilms();
+first();
+Second();
 
-function detectPersonalLevel() {
-    if (personalMovieDB.count < 10) {
-        console.log("Просмотрено довольно мало фильмов");
-    } else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
-        console.log("Вы классический зритель");
-    } else if (personalMovieDB.count >= 30 ) {
-        console.log("Вы киноман");
-    } else {
-        console.log("Произошла ошибка");
-    }
-}
-detectPersonalLevel();
-
-function showMyDB(hidden) {
-    if (!hidden) {
-        console.log(personalMovieDB);
-    }
+function learnJS(lang, callback) {
+    console.log(`Я учу: ${lang}`);
+    callback();
 }
 
-function writeYourGenres() {
-    for (let i = 1; i <= 3; i++) {
-        const genre = prompt(`Ваш любимый жанр под номером ${i}`);
-        personalMovieDB.genres[i - 1] = genre;
-    }
-
+function done () {
+    console.log('Я прошел этот урок!');
 }
-writeYourGenres();
-showMyDB(personalMovieDB.privat);
-
-
-
+///////////////////////////////////////
+learnJS('JavaScript', done);
+learnJS('JavaScript', function() {
+    console.log('Я прошел этот урок!');
+});
+///////////////////////////////////////
