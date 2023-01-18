@@ -952,30 +952,67 @@ P.S. Функции вызывать не обязательно*/
 
 
 // ############################################### Callback- функции ###############################################
-function first() {
-    // Do sщmething(Сделай что-нибудь)
-    setTimeout(function() {
-        console.log(1);
-    },500);
-}
+// function first() {
+//     // Do sщmething(Сделай что-нибудь)
+//     setTimeout(function() {
+//         console.log(1);
+//     },500);
+// }
 
-function Second() {
-    console.log(2);
-}
-first();
-Second();
+// function Second() {
+//     console.log(2);
+// }
+// first();
+// Second();
 
-function learnJS(lang, callback) {
-    console.log(`Я учу: ${lang}`);
-    callback();
-}
+// function learnJS(lang, callback) {
+//     console.log(`Я учу: ${lang}`);
+//     callback();
+// }
 
-function done () {
-    console.log('Я прошел этот урок!');
-}
+// function done () {
+//     console.log('Я прошел этот урок!');
+// }
+// ///////////////////////////////////////
+// learnJS('JavaScript', done);
+// learnJS('JavaScript', function() {
+//     console.log('Я прошел этот урок!');
+// });
 ///////////////////////////////////////
-learnJS('JavaScript', done);
-learnJS('JavaScript', function() {
-    console.log('Я прошел этот урок!');
-});
-///////////////////////////////////////
+
+// ####################################### Объекты, деструктуризация объектов #######################################
+
+const options = {
+//  ключь | значение
+    Name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    },
+    mekeTest: function() {
+        console.log('test');
+    }
+};
+options.mekeTest();
+
+const {border, bg} =options.colors;
+console.log(border,);
+console.log(Object.keys(options).length);
+console.log(options.Name);
+delete options.Name;
+console.log(options);
+
+let counter = 0;
+for (let key in options) {
+    if (typeof(options[key]) === 'object') {
+        for (let i in options[key]) {
+            console.log(`Свойство ${i} имеет значение ${options[key][i]}`);
+        }
+    } else {
+        console.log(`Свойство ${key} имеет значение ${options[key]}`);
+        counter++;
+    }
+}
+console.log(counter);
