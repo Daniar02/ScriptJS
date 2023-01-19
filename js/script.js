@@ -1053,83 +1053,123 @@ P.S. Функции вызывать не обязательно*/
 
 // ########################## Передача по ссылке или по значению, Spread оператор (ES6-ES9) ##########################
 
-let a = 5,
-    b = a;
-b = b + 5;
-console.log(b);
-console.log(a);
+// let a = 5,
+//     b = a;
+// b = b + 5;
+// console.log(b);
+// console.log(a);
 
-const obj = {
-    a: 5,
-    b: 1
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+// const copy = obj; // Сылку
+// copy.a = 10;
+// console.log(copy);
+// console.log(obj);
+
+// function copy(mainObj) {
+//     let objCopy = {};
+//     let key;
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
+//     return objCopy;
+// }
+
+// const numbers = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
+
+// const newNumbers = copy(numbers);
+// newNumbers.a = 10;
+// newNumbers.c.x = 10;
+// // console.log(newNumbers);
+// // console.log(numbers);
+
+// const add = {
+//     d: 17,
+//     e: 20
+// };
+
+// // console.log(Object.assign(numbers, add));
+
+// const clone = Object.assign({}, add);
+// clone.d = 20;
+// console.log(add);
+// console.log(clone);
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
+// newArray[1] = 'dancho';
+// console.log(newArray);
+// console.log(oldArray);
+
+// const video = ['youtube', 'vimeo', 'rutube'],
+//       blogs = ['wordpress', 'livejournal', 'blogger', 'rutube'],
+//       internet = [...video, ...blogs, 'vk', 'foocebuc'];
+// console.log(internet);
+
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+// const num = [2, 5, 7];
+// log(...num);
+
+// const array = ['a', 'b'];
+// const newAarray = [...array];
+// console.log(newAarray);
+
+// const q = {
+//     one: 1,
+//     two: 2
+// };
+// const newObj = {...q};
+// console.log(newObj);
+
+// function resCom() {
+//     for (let i = 0; i < 1; i++) {
+//         let a = prompt("Nursultan");
+//         if (a != '') {
+//             console.log('Данияр молодец');
+//         } else {
+//             console.log('Это prompt');
+//             i--;
+//         }
+//     }
+// }
+// resCom();
+
+// ########################## Мастер класс ##########################
+const valuts = {
+    com: 1.30,
+    rub: 1.20,
 };
-const copy = obj; // Сылку
-copy.a = 10;
-console.log(copy);
-console.log(obj);
 
-function copy(mainObj) {
-    let objCopy = {};
-    let key;
-    for (key in mainObj) {
-        objCopy[key] = mainObj[key];
+const valut1 = document.querySelector('#valut1');
+const valut2 = document.querySelector('#valut2');
+const convert = document.querySelector('#convert');
+
+valut1.addEventListener('input', item => {
+    console.log(convert.value);
+    if (convert.value === 'com_to_rub') {
+        valut2.value = (valut1.value * valuts.com).toFixed(2);
+    } else if (convert.value === 'rub_to_com') {
+        valut2.value = (valut1.value / valuts.rub).toFixed(2);
     }
-    return objCopy;
-}
+});
 
-const numbers = {
-    a: 2,
-    b: 5,
-    c: {
-        x: 7,
-        y: 4
+convert.addEventListener('change', item => {
+    if (convert.value === 'com_to_rub') {
+        valut2.value = (valut1.value * valuts.com).toFixed(2);
+    } else if (convert.value === 'rub_to_com') {
+        valut2.value = (valut1.value / valuts.rub).toFixed(2);
     }
-};
-
-const newNumbers = copy(numbers);
-newNumbers.a = 10;
-newNumbers.c.x = 10;
-// console.log(newNumbers);
-// console.log(numbers);
-
-const add = {
-    d: 17,
-    e: 20
-};
-
-// console.log(Object.assign(numbers, add));
-
-const clone = Object.assign({}, add);
-clone.d = 20;
-console.log(add);
-console.log(clone);
-
-const oldArray = ['a', 'b', 'c'];
-const newArray = oldArray.slice();
-newArray[1] = 'dancho';
-console.log(newArray);
-console.log(oldArray);
-
-const video = ['youtube', 'vimeo', 'rutube'],
-      blogs = ['wordpress', 'livejournal', 'blogger', 'rutube'],
-      internet = [...video, ...blogs, 'vk', 'foocebuc'];
-console.log(internet);
-
-function log(a, b, c) {
-    console.log(a);
-    console.log(b);
-    console.log(c);
-}
-const num = [2, 5, 7];
-log(...num);
-
-const array = ['a', 'b'];
-const newAarray = [...array];
-console.log(newAarray);
-
-const q = {
-    one: 1,
-    two: 2
-};
-const newObj = {...q};
-console.log(newObj);
+});
