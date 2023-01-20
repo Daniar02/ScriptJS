@@ -1201,3 +1201,46 @@ P.S. Функции вызывать не обязательно*/
 
 // // console.log(jonh.armor);
 // jonh.sayHello();
+
+// ################################ Угадай число ################################
+
+// let num = 55;
+// const sum = 0;
+// for (let i = 0; i < 1; i++) {
+//     let guess = prompt("Угадай");
+//     if (guess == num) {
+//         console.log('Угадал');
+//     } else if (guess > num) {
+//         console.log("Больше");
+//         i--;
+//     } else if(guess < num){
+//         console.log("Меньше");
+//         i--;
+//     } else if (guess length < 5)
+// }
+
+// let num = 77;
+// let pop = 0;
+
+// while(pop < 7) {
+//     const x = prompt('Угадай число');
+//     pop++;
+//     console.log(pop);
+//     if(x > num) {
+//         console.log('Больше');
+//     }else if(x < num){
+//         console.log('Меньше');
+//     }else if(x == num) {
+//         console.log('Угадал');
+//         break;
+//     } 
+// } 
+
+// if(pop == 7){
+//     console.log(`вы проиграли\nЯ зогадал: ${num}`);
+// }
+
+
+
+
+
