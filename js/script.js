@@ -1147,29 +1147,57 @@ P.S. Функции вызывать не обязательно*/
 // }
 // resCom();
 
-// ########################## Мастер класс ##########################
-const valuts = {
-    com: 1.30,
-    rub: 1.20,
-};
+// ################################################### Мастер класс ###################################################
+// const valuts = {
+//     com: 1.30,
+//     rub: 1.20,
+// };
 
-const valut1 = document.querySelector('#valut1');
-const valut2 = document.querySelector('#valut2');
-const convert = document.querySelector('#convert');
+// const valut1 = document.querySelector('#valut1');
+// const valut2 = document.querySelector('#valut2');
+// const convert = document.querySelector('#convert');
 
-valut1.addEventListener('input', item => {
-    console.log(convert.value);
-    if (convert.value === 'com_to_rub') {
-        valut2.value = (valut1.value * valuts.com).toFixed(2);
-    } else if (convert.value === 'rub_to_com') {
-        valut2.value = (valut1.value / valuts.rub).toFixed(2);
-    }
-});
+// valut1.addEventListener('input', item => {
+//     console.log(convert.value);
+//     if (convert.value === 'com_to_rub') {
+//         valut2.value = (valut1.value * valuts.com).toFixed(2);
+//     } else if (convert.value === 'rub_to_com') {
+//         valut2.value = (valut1.value / valuts.rub).toFixed(2);
+//     }
+// });
 
-convert.addEventListener('change', item => {
-    if (convert.value === 'com_to_rub') {
-        valut2.value = (valut1.value * valuts.com).toFixed(2);
-    } else if (convert.value === 'rub_to_com') {
-        valut2.value = (valut1.value / valuts.rub).toFixed(2);
-    }
-});
+// convert.addEventListener('change', item => {
+//     if (convert.value === 'com_to_rub') {
+//         valut2.value = (valut1.value * valuts.com).toFixed(2);
+//     } else if (convert.value === 'rub_to_com') {
+//         valut2.value = (valut1.value / valuts.rub).toFixed(2);
+//     }
+// });
+
+// ################################ Основы ООП, прототипно-ориентированное наследование ################################
+// let str = "some";
+// let strObj = {
+//    new: String(str)
+// };
+// console.log(typeof(str));
+// console.log(typeof(strObj));
+// console.dir([1, 2, 3]);
+
+// const soldier = {
+//     health: 400,
+//     armor:100,
+//     sayHello: function() {
+//         console.log('Hello');
+//     }
+// };
+
+// const jonh = Object.create(soldier);
+// // const jonh = {
+// //     health: 100
+// // };
+
+// // jonh.__proto__ = soldier;
+// // Object.setPrototypeOf(jonh, soldier);
+
+// // console.log(jonh.armor);
+// jonh.sayHello();
