@@ -1410,3 +1410,66 @@ P.S. Функции вызывать не обязательно*/
 //     return productPrice <= money + creditMoney;
 // }
 // console.log(canBuy(2000, 25, 1900, true));
+
+// ################################################ Массив ################################################
+// const num = ["1", "2", '3', "4"];
+// console.log(num.length);
+// console.log(num[num.length -3]);
+// console.log(num.at(0));
+// push(дб конце) unshift(дб начало) pop(уд конце) shift(уд начало)
+// indexOf(поиск) includes(true false)
+// const elIndex = num.indexOf("3");
+// console.log(elIndex);
+// console.log(num.includes("2"));
+// if (num.includes("2")) {
+//     console.log('Доступ есть');
+// }
+// ///////////////////////////////////////
+// const res = num.slice(2); // (2 до конца)
+// console.log(res);
+// const res1 = num.slice(2, 3); // (2 до 3 вырезаеть)
+// console.log(res1); 
+// const res2 = num.slice(-1); // (последний)
+// console.log(res2);
+///////////////////////////////////////////
+// const res3 = num.splice(2, 5).reverse();
+// console.log(res3);
+/////////////////////
+// const sum = ["5", "6"];
+// const res4 = num.concat(sum); // concat(дб массив массив)
+// console.log(res4); 
+/////////////////////
+// const url = "daniar/nursultan/nurbolot";
+// const res = url.split('/'); // split(разбить)
+// console.log(res);
+////////////////////
+// const tasks = ['Задача 1'];
+// function Add(task) {
+//     tasks.push(task);
+// }
+
+// function Remove(task) {
+//     const index = tasks.indexOf(task);
+//     if (index === -1) {
+//         return;
+//     }
+//     tasks.splice(index, 1);
+// }
+
+// function Prioritize(task) {
+//     const index = tasks.indexOf(task);
+//     if (index === -1) {
+//         return;
+//     }
+//     const oldTask = tasks[index];
+//     tasks.splice(index, 1);
+//     tasks.unshift(oldTask);
+// }
+
+// Add('Задача 2');
+// Add('Задача 3');
+// console.log(tasks);
+// Remove('Задача 2');
+// console.log(tasks);
+// Prioritize('Задача 3');
+// console.log(tasks);
