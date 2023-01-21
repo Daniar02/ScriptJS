@@ -1294,10 +1294,6 @@ P.S. Функции вызывать не обязательно*/
 // let message =  budget > mersAmg ? "MERS" : budget > bmwX5 ? 'BMW' : "Велосипед";
 // console.log(`Я куплю: ${message}`);
 
-// Методом prompt получите ответ пользователя на вопрос "Сколько будет 7 + или - 15?". Если ответ верен выведите в консоле "Успех", если нет -
-// "Вы робот!"
-// а если он введёт "Я не робот", то тоже "Успех
-
 // const num = prompt("Сколько будет 7 + или - 15?");
 // switch(true) {
 //     case num === "Я не робот":
@@ -1321,4 +1317,96 @@ P.S. Функции вызывать не обязательно*/
 //         default:
 //             console.log("Вы робот!");
 //     }
+// };
+
+// ################################################ Function ################################################
+// function nameUber(name, uber) {
+//     if(uber == 'lower') {
+//         return name.toLowerCase();
+//     }
+//     if(uber == 'upper') {
+//         return name.toUpperCase();
+//     }
+    
 // }
+// console.log(nameUber('Nursultan', 'upper'));
+
+// function powerOftwo(num) {
+//     console.log(num);
+//     return num * num;
+// }
+// console.log(powerOftwo(5));
+// // Анонимные функции
+// const poft = function (num) {
+//     console.log(num);
+//     return num * num;
+// };
+// console.log(poft(6));
+// // Стрелочные функции
+// const poft1 = num => num * num;
+// console.log(poft1(4));
+
+// const poft2 = num => {
+//     console.log(num);
+//     return num * num;
+// };
+// console.log(poft2(3));
+// ///////////////////
+// function toPower(num, power = 2) {
+//     const res = num * power;
+//     return res;
+// }
+// console.log(toPower(2, 3));
+// console.log(toPower(2));
+// // // Стрелочные функции
+// const toPowerArrow  = (num, power) => num * power;
+// console.log(toPowerArrow(2, 3));
+// console.log(toPowerArrow(2));
+/////////////////////////////////////////////////
+// function canAccsseWebsite(age) {
+//     if (age < 18) {
+//         return 'нет';
+//     }
+//     return 'да';
+// }
+// console.log(canAccsseWebsite(19));
+// // // Стрелочные функции
+// const canAccsseWebsite2 = age => age < 18 ? 'нет' : 'да';
+// console.log(canAccsseWebsite2(19));
+//////////////////////////////////////////////////
+// const KG_IN_USD = 7;
+// const KM_IN_USD = 5;
+
+// function calculateW(present) {
+//     return present * KG_IN_USD;
+// }
+// function calculateKM(distance) {
+//     return distance * KM_IN_USD;
+// }
+// function getExchagePrice(present1, present2, distance) {
+//     const  price1 = calculateW(present1);
+//     const  price2 = calculateW(present2);
+//     const distancePrice = calculateKM(distance);
+//     console.log(price1);
+//     console.log(price2);
+//     console.log(distancePrice);
+//     return price1 + price2 + distancePrice;
+  
+// }
+// console.log(getExchagePrice(1, 2, 10));
+/////////////////////////////////////////
+// function computeCredit(age, hasJob = false) {
+//     switch(true) {
+//         case age > 24 && hasJob:
+//             return 500;
+//         case age > 24:
+//             return 100;
+//         default:
+//             return 0;
+//     }
+// }
+// function canBuy(productPrice, age, money, hasJob = false) {
+//     const creditMoney = computeCredit(age, hasJob);
+//     return productPrice <= money + creditMoney;
+// }
+// console.log(canBuy(2000, 25, 1900, true));
