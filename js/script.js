@@ -1240,7 +1240,85 @@ P.S. Функции вызывать не обязательно*/
 //     console.log(`вы проиграли\nЯ зогадал: ${num}`);
 // }
 
+// ################################ switch ################################
+// const role = "manager";
+// if (role == "manager") {
+//     console.log('менеджер');
+// } else if (role === 'admin') {
+//     console.log('админ');
+// } else if(role === 'ceo') {
+//     console.log('CEO');
+// } else {
+//     console.log('error');
+// }
 
+// switch(role) {
+//     case 'manager': // role === 'manager'
+//         console.log('менеджер');
+//         break;
+//     case 'admin':  // role === 'admin'
+//         console.log('админ');
+//         break;
+//     case 'ceo':  // role === 'ceo'
+//         console.log('CEO');
+//         break;
+//     default:
+//         console.log('error');
+// }
 
+// const num = 1;
+// switch (true) {
+//     case num > 0: // true === num > 0
+//         console.log('Положительный');
+//         break;
+//     case num < 0:
+//         console.log('Отрицательный');
+//         break;
+//     default:
+//         console.log("Ноль!");
+// }
 
+// const bmwX5 = 150;
+// const mersAmg = 150;
+// const budget = 200;
+// // let message;
+// // if (budget > bmwX5) {
+// //     message = "BMW";
+// // } else if (budget > mersAmg) {
+// //     message = "MERS";
+// // } else { 
+// //     message = "Велосипед";
+// // }
+// // console.log(`Я куплю: ${message}`);
 
+// let message =  budget > mersAmg ? "MERS" : budget > bmwX5 ? 'BMW' : "Велосипед";
+// console.log(`Я куплю: ${message}`);
+
+// Методом prompt получите ответ пользователя на вопрос "Сколько будет 7 + или - 15?". Если ответ верен выведите в консоле "Успех", если нет -
+// "Вы робот!"
+// а если он введёт "Я не робот", то тоже "Успех
+
+// const num = prompt("Сколько будет 7 + или - 15?");
+// switch(true) {
+//     case num === "Я не робот":
+//     case +num === 22:
+//     case +num === -8:
+//         console.log("Успех");
+//         break;
+//     default: 
+//     console.log("Вы робот!");
+// }
+
+// if (num === "Я не робот") {
+//     console.log("Успех");
+// } else {
+//     const numNum = Number(num);
+//     switch(numNum) {
+//         case 22:
+//         case -8:
+//             console.log("Успех");
+//             break;
+//         default:
+//             console.log("Вы робот!");
+//     }
+// }
