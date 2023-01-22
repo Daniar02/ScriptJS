@@ -1453,17 +1453,15 @@ P.S. Функции вызывать не обязательно*/
 //     if (index === -1) {
 //         return;
 //     }
-//     tasks.splice(index, 1);
+//     return tasks.splice(index, 1);
 // }
 
 // function Prioritize(task) {
-//     const index = tasks.indexOf(task);
-//     if (index === -1) {
+//     const result = Remove(task);
+//     if (!result) {
 //         return;
 //     }
-//     const oldTask = tasks[index];
-//     tasks.splice(index, 1);
-//     tasks.unshift(oldTask);
+//     tasks.unshift(result[0]);
 // }
 
 // Add('Задача 2');
@@ -1473,3 +1471,34 @@ P.S. Функции вызывать не обязательно*/
 // console.log(tasks);
 // Prioritize('Задача 3');
 // console.log(tasks);
+/////////////////////////////////////////////
+// const userData = ['Данияр', 20, 'Бишкек'];
+// function getData() {
+//     return ['Данияр', 20, 'Бишкек'];
+// }
+// // const neme = getData()[0];
+// // const age = getData()[1];
+// // const city = getData()[2];
+// const [neme, age, city] = getData();
+// console.log(neme, age, city);
+/////////////////////////////////////////
+// Rest(Остаольное)
+// const num = [1, 2, 3, 4, 5, 6];
+// const [one, two, ...others] = num;
+// console.log(one, two, others);
+///////////////////////////////////
+// const url = 'https://purpleschool.ru/course/javascript';
+// const url2 = 'purpleschool.ru/course/javascript';
+// function getUrlPParts(url) {
+//     const [protocol, _, host, ...path] = url.split('/');
+//     if (protocol === 'https:' || protocol === 'http:') {
+//         if (!host.includes('.')) {
+//             return;
+//         }
+//         console.log(protocol, _, host, path);
+//         console.log(`Протокол: ${protocol.split(':')[0]}`);
+//         console.log(`Доменное имя: ${host}`);
+//         console.log(`Путь внутри сайта: /${path.join('/')}`);
+//     }
+// }
+// getUrlPParts(url2);
