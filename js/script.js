@@ -1502,3 +1502,36 @@ P.S. Функции вызывать не обязательно*/
 //     }
 // }
 // getUrlPParts(url2);
+
+// ################################################ Цикл ################################################
+// const num = ['1', '2', '3', '4'];
+// for (let i = 0; i < num.length; i++) {
+//     if (num[i] === "2") {
+//         continue;
+//     }
+//     console.log(`${num[i]}`);
+// }
+/////////////////////////////
+// const arr = ['!', "JS", "люблю", "я"];
+// const resultArray = [];
+// for (let i = arr.length - 1; i >= 0; i--) {
+//     resultArray.push(arr[i]);
+// }
+// console.log(resultArray.join(' '));
+/////////////////////////////////////
+// for (let i = 1; i < 3; i++) {
+//     console.log(`Отец ${i}`);
+//     for (let j = 1; j < 5; j++) {
+//         console.log(`Сын ${j}`);
+//     }
+//     for (let k = 1; k < 5; k++) {
+//         console.log(`Малыш ${k}`);
+//     }
+// }
+//////////////////////////////////////////
+// const num = [[1,'Отец 1'], [2, 'Отец 2']];
+// for (let i = 0; i < num.length; i++) {
+//     for (let j = 0; j < num[i].length; j++) {
+//         console.log(num[i][j]);
+//     }
+// }
