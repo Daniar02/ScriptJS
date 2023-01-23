@@ -1535,3 +1535,81 @@ P.S. Функции вызывать не обязательно*/
 //         console.log(num[i][j]);
 //     }
 // }
+/////////////////////////////////////////
+// for (let i = 0; i < 5; i++) {
+//     console.log(`фор ${i}`);
+// }
+// let i = 0;
+// while (i < 5) {
+//     console.log(`фор ${i}`);
+//     i++;
+// }
+// const num = [1, 4, 8, 7];
+// // for (let i = 0; i < num.length; i ++) {
+// //     if (num[i] > 5) {
+// //         break;
+// //     }
+// //     console.log(num[i]);
+// // }
+
+// // let i = 0;
+// // while(num[i] <= 5 && i < num.length) {
+// //     console.log(num[i]);
+// //     i++;
+// // }
+// // let j = 0;
+
+// // do {
+// //     console.log(j);
+// //     j++;
+// // } while(j < 0);
+
+// for (let element of num) {
+//     console.log(element);
+// }
+// for (let index in num) {
+//     console.log(num[index]);
+// }
+///////////////////////
+// const operations = [1000, -700, 300, -500, 10000];
+// const startingBalance = 100;
+// function getBalance(arrayOfOperations, initailBalance) {
+//     let balance = initailBalance;
+//     for (const element of arrayOfOperations) {
+//         balance += element;
+//     }
+//     return balance;
+// }
+// console.log(getBalance(operations, startingBalance));
+// function chechOperations(arrayOfOperations, initailBalance) {
+//     let balance = initailBalance;
+//     let isOk = true;
+//     for (const element of arrayOfOperations) {
+//         balance += element;
+//         if (balance < 0) {
+//             isOk = false;
+//             break;
+//         }
+//     }
+//     return isOk; 
+// }
+// console.log(chechOperations(operations, startingBalance));
+// function avarageOperations(arrayOfOperations) {
+//     let positiveCount = 0;
+//     let positiveSum = 0;
+//     let negativeCount = 0;
+//     let negativeSum = 0;
+//     for (const element of arrayOfOperations) {
+//         if (element > 0) {
+//             positiveCount++;
+//             positiveSum += element;
+//         }
+//         if (element < 0) {
+//             negativeCount++;
+//             negativeSum += element;
+//         }
+//     }
+//     return [positiveSum / positiveCount, negativeSum / negativeCount];
+
+// }
+// console.log(avarageOperations(operations));
