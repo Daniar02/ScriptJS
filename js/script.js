@@ -1613,3 +1613,47 @@ P.S. Функции вызывать не обязательно*/
 
 // }
 // console.log(avarageOperations(operations));
+
+// ################################################ function ################################################
+// function add(a, b) {
+//     return a + b;
+// }
+
+// function subtract(a, b) {
+//     return a - b;
+// }
+
+// function number(a, b) {
+//     return a * b;
+// }
+// //Функция высшего порядка
+// function calclate(a, b, fn) {
+//     console.log(fn.name);
+//     const res = fn(a, b);
+//     return res;
+// }
+// let res = calclate(3, 5, add);
+// console.log(res);
+// res = calclate(3, 5, subtract);
+// console.log(res);
+// res = calclate(3, 5, number);
+// console.log(res);
+//////////////////////////////////////////
+// function power(pow) {
+//     return function(num) {
+//         return num * pow;
+//     };
+// }
+// Стрелечный функции
+// const power = pow => num => pow*num;
+// ////////////////////////////////
+// const powerOfTwo = power(2);
+// console.log(powerOfTwo(5));
+// console.log(powerOfTwo(10));
+
+// const powerOfThree = power(4);
+// console.log(powerOfThree(5));
+// console.log(powerOfThree(10));
+
+// console.log(power(2)(5));
+//////////////////////////////
