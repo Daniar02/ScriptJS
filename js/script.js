@@ -1657,3 +1657,35 @@ P.S. Функции вызывать не обязательно*/
 
 // console.log(power(2)(5));
 //////////////////////////////
+// ################################################ Итерации в массивах ################################################
+///////////////////// forEach ////////////////////////
+// const score = [5, 10, 0, 5];
+// // for (const [i ,el] of score.entries()) {
+// //     console.log(`Пункт ${i + 1}: ${el}`);
+// // }
+// score.forEach((scoreEl, i) => {
+//     console.log(`Раунд ${i + 1}: ${scoreEl}`);
+// });
+///////////////////// map ////////////////////////
+// const transactionInUSD = [10, -7, 50, -10, 100];
+// const transactionInRUB = [];
+// for (const transition of transactionInUSD) {
+//     transactionInRUB.push(transition * 60);
+// }
+// // console.log(transactionInUSD);
+// // console.log(transactionInRUB);
+
+// const transactionInRUB2 = transactionInUSD.map((transition, i) => {
+//     return transition * 60;
+// });
+// console.log(transactionInUSD);
+// console.log(transactionInRUB2);
+/////////////////////  ////////////////////////
+// const operations = [100, -20, 7 ,-20, 50];
+// const positiveOperations = [];
+// for (const operation of operations) {
+//     if (operation > 0) {
+//         positiveOperations.push(operation);
+//     }
+// }
+// console.log(positiveOperations);
