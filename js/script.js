@@ -1711,3 +1711,64 @@ P.S. Функции вызывать не обязательно*/
 //     balance += operation;
 // } 
 // console.log(balance); 
+///////////////////// Reduce ////////////////////////////
+// const finalBalance = operations.reduce((acc, operation, i) => {
+//     console.log(`Итератция ${i}, acc: ${acc}, operation: ${operation}`);
+//     return acc += operation;
+// },0);
+// console.log(finalBalance);
+// ////////////// //////////////////////
+// const minElement = operations.reduce((acc, operation) => {
+//     if (operation > acc) {
+//         return acc;
+//     } else {
+//         return operation;
+//     }
+// },0);
+// console.log(minElement);
+// 0 - acc = 0, opoeration = 100;
+// 1 - acc = 100, operation = -20;
+// 2 - acc = 80, operation = 7;
+// 3 - acc = 87, operation = -30;
+// 4 - acc = 57, operation = 50;
+//////////////////////
+// const arr = [ 2, 4, 4, 10];
+// const avg = arr.reduce((acc, el, i) => {
+//     if (i != arr.length - 1) {
+//         return acc + el;
+//     } else {
+//         return (acc + el) / arr.length;
+//     }
+// }, 0);
+// console.log(avg);
+////////////////// find и findIndex /////////////////
+// const arr = [2, 4, 4, 10];
+// let elGT5;
+// for (const el of arr) {
+//     if (el > 5) {
+//         elGT5 = el; // =(присваивание)
+//         break;
+//     }
+// }
+// console.log(elGT5);
+//////////// find /////////
+///////////// findIndex ///////////
+// elGT5 = arr.find(el => el > 5);
+// const elGT5Index = arr.findIndex(el => el > 5);
+// console.log(elGT5Index);
+// console.log(elGT5);
+////////////// Уп ////////////
+// const arr = [2, 4, 4, 10, 20];
+// function some(array, element) {
+//     const res = array .find(el => el === element);
+    
+// }
+// console.log(some(arr, 0));
+// console.log(arr.some(el => el === 2));
+////////////// flat и flatMap ////////////
+// const prices = [[2, 4], [3, 4], [10, [20, 50]]];
+// const res = prices.flat(3);
+// const res2 = prices.flatMap(el => el.concat([2]));
+// console.log(res);
+// console.log(res2);
+
