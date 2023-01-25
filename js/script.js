@@ -1791,69 +1791,84 @@ P.S. Функции вызывать не обязательно*/
 // console.log(obj);
 
 // ################################################ Итерации в массивах ################################################
-function copy(mainObj) {
-    let objCopy = {};
+// function copy(mainObj) {
+//     let objCopy = {};
 
-    let key;
-    for (key in mainObj) {
-        objCopy[key] = mainObj[key];
-    }
-    return objCopy;
-}
+//     let key;
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key];
+//     }
+//     return objCopy;
+// }
 
-const numbers = {
-    a: 2,
-    b: 5,
-    c: {
-        x: 7,
-        y: 4
-    }
-};
+// const numbers = {
+//     a: 2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
 
-const newNumbers = copy(numbers);
-newNumbers.a = 10;
-newNumbers.c.x = 10;
-console.log(newNumbers);
-console.log(numbers);
+// const newNumbers = copy(numbers);
+// newNumbers.a = 10;
+// newNumbers.c.x = 10;
+// console.log(newNumbers);
+// console.log(numbers);
 
-const add = {
-    d: 17,
-    e: 20
-};
-const clone = Object.assign({}, add);
-clone.d = 20;
-console.log(add);
-console.log(clone);
-// console.log(Object.assign(numbers, add));
+// const add = {
+//     d: 17,
+//     e: 20
+// };
+// const clone = Object.assign({}, add);
+// clone.d = 20;
+// console.log(add);
+// console.log(clone);
+// // console.log(Object.assign(numbers, add));
 
-const oldArray = ['a', 'b', 'c'];
-const newArray = oldArray.slice();
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
 
-newArray[1] = 'daniar';
-console.log(newArray);
-console.log(oldArray);
+// newArray[1] = 'daniar';
+// console.log(newArray);
+// console.log(oldArray);
 
-const video = ['youtube', 'vimeo', 'retube'],
-      blogs = ['wordpress', 'livejournal', 'blogger'],
-      internet = [...video, ...blogs, 'vk', 'in'];
-console.log(internet);
+// const video = ['youtube', 'vimeo', 'retube'],
+//       blogs = ['wordpress', 'livejournal', 'blogger'],
+//       internet = [...video, ...blogs, 'vk', 'in'];
+// console.log(internet);
 
-function log(a, b, c) {
-    console.log(a);
-    console.log(b);
-    console.log(c);
-}
-const num = [2, 5, 7];
-log(...num);
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+// const num = [2, 5, 7];
+// log(...num);
 
-const array = ['a', 'b'];
-const array1 = ['a', 'b'];
-const newAarray = [...array, ...array1, 'c', 'd'];
-console.log(newAarray);
+// const array = ['a', 'b'];
+// const array1 = ['a', 'b'];
+// const newAarray = [...array, ...array1, 'c', 'd'];
+// console.log(newAarray);
 
-const g = {
-    one: 1,
-    two: 2
-};
-const newObj = {...g, on:3};
-console.log(newObj);
+// const g = {
+//     one: 1,
+//     two: 2
+// };
+// const newObj = {...g, on:3};
+// console.log(newObj);
+
+// ################################################ ООП ################################################
+// const solider = {
+//     health: 400,
+//     armor: 100,
+//     sayHello: function() {
+//         console.log('Hello');
+//     }
+// };
+// const jonh = Object.create(solider);
+// // const jonh = {
+// //     health: 100,
+// // };
+// // Object.setPrototypeOf(jonh, solider);
+// jonh.sayHello();
