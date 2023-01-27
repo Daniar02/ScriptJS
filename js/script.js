@@ -1986,45 +1986,72 @@ P.S. Функции вызывать не обязательно*/
 
 // ##########################################  Динамическая типизация в JS ##########################################
 
-    // To String
-    // 1)
-    console.log(typeof(String(null)));
-    console.log(typeof(String(4)));
-    // 2)
-    console.log(typeof(null + ''));
+    // // To String
+    // // 1)
+    // console.log(typeof(String(null)));
+    // console.log(typeof(String(4)));
+    // // 2)
+    // console.log(typeof(null + ''));
 
-    const num = 5;
+    // const num = 5;
 
-    console.log("https://vk.com.catalog/" + num);
+    // console.log("https://vk.com.catalog/" + num);
 
-    const fontSize = 26 + "px";
-    console.log(fontSize);
+    // const fontSize = 26 + "px";
+    // console.log(fontSize);
 
-    // To Number
-    // 1)
-    console.log(typeof(Number('4')));
-    // 2)
-    console.log(typeof(+('4')));
-    // 3)
-    console.log(typeof(parseInt('15px', 10)));
+    // // To Number
+    // // 1)
+    // console.log(typeof(Number('4')));
+    // // 2)
+    // console.log(typeof(+('4')));
+    // // 3)
+    // console.log(typeof(parseInt('15px', 10)));
 
-    let answ = +prompt("hello", "");
+    // let answ = +prompt("hello", "");
 
-    // To boolean
-    // false - 0, '', null, undefined, NaN;
-    // 1)
-    let switcher = null;
+    // // To boolean
+    // // false - 0, '', null, undefined, NaN;
+    // // 1)
+    // let switcher = null;
 
-    if (switcher) {
-        console.log('Working...');
-    }
-    switcher = 1;
+    // if (switcher) {
+    //     console.log('Working...');
+    // }
+    // switcher = 1;
 
-    if (switcher) {
-        console.log('Working...');
-    }
-    // 2)
-    console.log(typeof(Boolean('4')));
-    // 3)
-    console.log(typeof((!!'434344')));
+    // if (switcher) {
+    //     console.log('Working...');
+    // }
+    // // 2)
+    // console.log(typeof(Boolean('4')));
+    // // 3)
+    // console.log(typeof((!!'434344')));
     
+
+// ##################################  Замыкание и лексическое окружение ##################################
+
+// let number = 5;debugger
+// function logNumber() {
+//     // let number = 5;debugger
+//     console.log(number);debugger
+// }
+// number = 6;debugger
+// logNumber();
+// number = 8;debugger
+// logNumber();
+
+// function createCounter() {
+//     let counter = 0;
+//     function myFunction() {
+//         counter = counter + 1;debugger
+//         return counter;debugger
+//     }
+//     return myFunction;
+// }
+// debugger
+// const incrument = createCounter();
+// const c1 = incrument();debugger
+// const c2 = incrument();debugger
+// const c3 = incrument();debugger
+// console.log(c1, c2, c3);
