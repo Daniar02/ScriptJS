@@ -2087,3 +2087,24 @@ P.S. Функции вызывать не обязательно*/
 // console.log('Ёжик' > 'яблоко');
 //12) Чему равно 0 || &quot;&quot; || 2 || undefined || true || falsе ?
 // console.log(0 || "" || 2 || undefined || true || false );
+
+// ##################################  Получение элементов со страницы ##################################
+// const box = document.getElementById('box');
+// console.log(box);
+
+// const btns = document.getElementsByTagName('button')[1]; //(2-элемент массива)
+// console.log(btns); //[1];(2-элемент массива внутри од-эл[0])
+
+// const circles = document.getElementsByClassName('circle');
+// console.log(circles);
+
+// const hearts = document.querySelectorAll('.heart');
+// hearts.forEach(item => {
+//     console.log(item);
+// });
+
+// const oneHeart = document.querySelector('.heart');
+// console.log(oneHeart);
+
+// const oneHeart1 = document.querySelector('div');
+// console.log(oneHeart1);
