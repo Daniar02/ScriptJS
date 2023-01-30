@@ -2164,49 +2164,74 @@ P.S. Функции вызывать не обязательно*/
 // div.insertAdjacentHTML("beforebegin", "<h2>Hello World</h2>");
 
 // ########################### События и их обработчики ###########################
-const btns = document.querySelectorAll('button'),
-      overlay = document.querySelector('.overlay');
+// const btns = document.querySelectorAll('button'),
+//       overlay = document.querySelector('.overlay');
 
-// btns.onclick = function() {
-//     alert('Click');
-// };
-// btns.onclick = function() {
-//     alert('Second click');
-// };
+// // btns.onclick = function() {
+// //     alert('Click');
+// // };
+// // btns.onclick = function() {
+// //     alert('Second click');
+// // };
 
-// btn.addEventListener('click', () => {
-//     alert('Click');
-// });
+// // btn.addEventListener('click', () => {
+// //     alert('Click');
+// // });
 
-// let i = 0;
-const deleteElement = ('mouseenter', (e) => {
-    console.log(e.target);
-    console.log(e.type);
-    // i++;
-    // if (i == 2) {
-    //     btn.removeEventListener("click", deleteElement);
-    // }
-    // e.target.remove();
-});
-// btns.addEventListener("click", deleteElement);
-// overlay.addEventListener("click", deleteElement);
-
-btns.forEach(btn => {
-    btn.addEventListener("click", deleteElement, {once: true});
-});
-
-const link = document.querySelector('a');
-link.addEventListener('click', function(event) {
-    event.preventDefault();
-    console.log(event.target);
-});
-
-
-// btn.addEventListener('mouseenter', (e) => {
-//     // alert('Second click');
-//     ////////
-//     // console.log(e.target);
-//     // /////////
+// // let i = 0;
+// const deleteElement = ('mouseenter', (e) => {
+//     console.log(e.target);
+//     console.log(e.type);
+//     // i++;
+//     // if (i == 2) {
+//     //     btn.removeEventListener("click", deleteElement);
+//     // }
 //     // e.target.remove();
-//     // console.log('Hover');
 // });
+// // btns.addEventListener("click", deleteElement);
+// // overlay.addEventListener("click", deleteElement);
+
+// btns.forEach(btn => {
+//     btn.addEventListener("click", deleteElement, {once: true});
+// });
+
+// const link = document.querySelector('a');
+// link.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     console.log(event.target);
+// });
+
+
+// // btn.addEventListener('mouseenter', (e) => {
+// //     // alert('Second click');
+// //     ////////
+// //     // console.log(e.target);
+// //     // /////////
+// //     // e.target.remove();
+// //     // console.log('Hover');
+// // });
+
+
+// ########################## Навигация по DOM - элементам, data-атрибуты, преимущество forof ##########################
+// console.log(document.head);
+// console.log(document.documentElement);
+// console.log(document.body.childNodes);
+
+// console.log(document.body.firstChild);
+// console.log(document.body.firstElementChild);
+// console.log(document.body.lastChild);
+// console.log(document.body.lastElementChild);
+
+// console.log(document.querySelector('#current').parentNode.parentNode);
+// console.log(document.querySelector('#current').parentElement);
+
+// console.log(document.querySelector('[data-current="3"').nextSibling);
+// console.log(document.querySelector('[data-current="3"').previousSibling);
+// console.log(document.querySelector('[data-current="3"').nextElementSibling);
+
+// for (let node of document.body.childNodes) {
+//     if (node.nodeName == "#text") {
+//         continue;
+//     }
+//     console.log(node);
+// }
