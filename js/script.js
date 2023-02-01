@@ -2373,14 +2373,32 @@ P.S. Функции вызывать не обязательно*/
 
 // ###################################### Async, defer, динамические скрипты ######################################
 
-const p = document.querySelectorAll('p');
-console.log(p);
+// const p = document.querySelectorAll('p');
+// console.log(p);
 
-function loadScript(src) {
-    const sctipt = document.createElement('script');
-    sctipt.src = src;
-    sctipt.async = false;
-    document.body.append(sctipt);
+// function loadScript(src) {
+//     const sctipt = document.createElement('script');
+//     sctipt.src = src;
+//     sctipt.async = false;
+//     document.body.append(sctipt);
+// }
+
+// loadScript("js/test.js");
+
+
+// ################################ Оператор нулевого слияния (Nullish, ) ES11 ################################
+const box = document.querySelector(".box");
+
+const newHeight = 100;
+const newWidth = 500;
+
+function changeParams(elem, h , w) {
+    elem.style.height = `${h ?? 200}px`;
+    elem.style.width = `${w ?? 200}px`;
+    elem.innerHTML = (h ?? 200) * (w ?? 200);
 }
+changeParams(box, newHeight, newWidth);
 
-loadScript("js/test.js");
+let userName;
+let userKey;
+console.log(userName ?? userKey ?? 'user');
