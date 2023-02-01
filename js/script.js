@@ -2237,102 +2237,135 @@ P.S. Функции вызывать не обязательно*/
 // }
 
 // ###################################### Рекурсия ######################################
-// function pow(x, n) {
-//     let result = 1;
+// // function pow(x, n) {
+// //     let result = 1;
 
-//     // умножаем result на x n раз в цикле
-//     for (let i = 0; i < n; i++) {
-//         result *= x; //(result = x * result;)    
+// //     // умножаем result на x n раз в цикле
+// //     for (let i = 0; i < n; i++) {
+// //         result *= x; //(result = x * result;)    
+// //     }
+// //     return result;
+// // }
+
+// // function pow(x, n) {
+// //     if (n === 1) {
+// //         return x;
+// //     } else {
+// //         return x * pow(x, n -1);
+// //     }
+// // }
+
+// // console.log(pow(2, 2)); // 4
+// // console.log(pow(2, 3)); // 8
+// // console.log(pow(2, 4)); // 16
+// /////////////////////////////////////////
+// let students = {
+//     js: [{
+//         name: 'john',
+//         progress: 100
+//     }, {
+//         name: 'Ivan',
+//         progress: 60
+//     }],
+//     html: {
+//         basic: [{
+//             name: 'Peter',
+//             progress: 20
+//         }, {
+//             name: 'Ann',
+//             progress: 18
+//         }],
+//         pro: [{
+//             name: 'Sam',
+//             progress: 10
+//         }],
+//         semi: {
+//             students: [{
+//                 name: 'Test',
+//                 progress: 100
+//             }]
+//         }
 //     }
-//     return result;
-// }
+// };
+// function getTotalProgressByIteration(data) {
+//     let total = 0;
+//     let students = 0;
 
-// function pow(x, n) {
-//     if (n === 1) {
-//         return x;
+//     for (let course of Object.values(data)) {
+//         if (Array.isArray(course)) {
+//             students +=  course.length;
+//             for (let i = 0; i < course.length; i++) {
+//                 total += course[i].progress;
+//             }
+//         } else {
+//             for (let subCourse of Object.values(course)) {
+//                 students +=  subCourse.length;
+//                 for (let i = 0; i < subCourse.length; i++) {
+//                     total += subCourse[i].progress;
+//                 }
+//             }
+//         }
+//     }
+
+//     return total / students;
+// }
+// // console.log(getTotalProgressByIteration(students));
+
+// ///////// Рекурсия ////////
+// function getTotalProgressByRecursion(data) {
+//     if (Array.isArray(data)) {
+//         let total = 0;
+
+//         for (let i = 0; i < data.length; i++) {
+//             total += data[i].progress;
+//         }
+
+//         return [total, data.length];
 //     } else {
-//         return x * pow(x, n -1);
+//         let total = [0, 0];
+
+//         for (let subData of Object.values(data)) {
+//             const subDataArr = getTotalProgressByRecursion(subData);
+//             total[0] += subDataArr[0];
+//             total[1] += subDataArr[1];
+//         }
+//         return total;
 //     }
 // }
+// const result = getTotalProgressByRecursion(students);
 
-// console.log(pow(2, 2)); // 4
-// console.log(pow(2, 3)); // 8
-// console.log(pow(2, 4)); // 16
-/////////////////////////////////////////
-let students = {
-    js: [{
-        name: 'john',
-        progress: 100
-    }, {
-        name: 'Ivan',
-        progress: 60
-    }],
-    html: {
-        basic: [{
-            name: 'Peter',
-            progress: 20
-        }, {
-            name: 'Ann',
-            progress: 18
-        }],
-        pro: [{
-            name: 'Sam',
-            progress: 10
-        }],
-        semi: {
-            students: [{
-                name: 'Test',
-                progress: 100
-            }]
-        }
-    }
-};
-function getTotalProgressByIteration(data) {
-    let total = 0;
-    let students = 0;
+// console.log(result[0]/result[1]);
 
-    for (let course of Object.values(data)) {
-        if (Array.isArray(course)) {
-            students +=  course.length;
-            for (let i = 0; i < course.length; i++) {
-                total += course[i].progress;
-            }
-        } else {
-            for (let subCourse of Object.values(course)) {
-                students +=  subCourse.length;
-                for (let i = 0; i < subCourse.length; i++) {
-                    total += subCourse[i].progress;
-                }
-            }
-        }
-    }
+// ###################################### События на мобильных устройствах ######################################
+// touchstart
+// touchmove
+// touchend
+// touchenter
+// touchleave
+// touchcancel
 
-    return total / students;
-}
-// console.log(getTotalProgressByIteration(students));
+window.addEventListener('DOMContentLoaded', () => {
+    const box = document.querySelector('.box');
+        
+    box.addEventListener('touchstart', (e) => {
+        e.preventDefault();
 
-///////// Рекурсия ////////
-function getTotalProgressByRecursion(data) {
-    if (Array.isArray(data)) {
-        let total = 0;
+        console.log('start');
+        console.log(e.targetTouches);
+    });
 
-        for (let i = 0; i < data.length; i++) {
-            total += data[i].progress;
-        }
+    box.addEventListener('touchmove', (e) => {
+        e.preventDefault();
 
-        return [total, data.length];
-    } else {
-        let total = [0, 0];
+        console.log(e.targetTouches[0].pageX);
+    });
 
-        for (let subData of Object.values(data)) {
-            const subDataArr = getTotalProgressByRecursion(subData);
-            total[0] += subDataArr[0];
-            total[1] += subDataArr[1];
-        }
-        return total;
-    }
-}
-const result = getTotalProgressByRecursion(students);
+    // box.addEventListener('touchend', (e) => {
+    //     e.preventDefault();
 
-console.log(result[0]/result[1]);
-
+    //     console.log('End');
+    // });
+});
+// touches
+// targetTouches
+// changetTouches
