@@ -110,7 +110,7 @@
     background-color: red;
   } */
 /* ###################### */
-  * {
+  /* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -121,4 +121,10 @@
     height: 150px;
     margin-bottom: 20px;
     background-color: olive;
-}
+} */
+
+/* .lorem {
+    max-width: 450px;
+    max-height: 300px;
+    background: #7d7676;
+} */
