@@ -2501,6 +2501,80 @@ P.S. Функции вызывать не обязательно*/
 // console.log(myAwesomeDB);
 
 // ################################ Итерируемые конструкции ################################
+// const user = {
+//     name: 'Alex',
+//     surname: 'Smith',
+//     birthday: '20/04/1993',
+//     showMyPublicData: function() {
+//         console.log(`${this.name} ${this.surname}`);
+//     }
+// };
+// // in
+// // for (const key in user) {
+// //     console.log(user[key]);
+// // }
+
+// // const arr = ['b', 'a', 'c'];
+
+// // for (const key in arr) {
+// //     console.log(arr[key]);
+// // }
+
+// // const str = 'string';
+
+// // for (const key in str) {
+// //     console.log(str[key]);
+// // }
+// // of
+// // for (const key of user) {
+// //     console.log(key);
+// // }
+
+// const arr = ['b', 'a', 'c'];
+// Array.prototype.someMethod = function() {};
+// for (const key of arr) {
+//     console.log(key);
+// }
+
+// // const str = 'string';
+
+// // for (const key of str) {
+// //     console.log(key);
+// // }
+
+// const salaries = {
+//     jonh: 500,
+//     ivan: 1000,
+//     ann: 5000,
+//     sayHello: function() {
+//         console.log('Hello');
+//     }
+// };
+
+// salaries[Symbol.iterator] = function() {
+//     return {
+//         curent: this.jonh,
+//         last: this.ann,
+
+//         next() {
+//             if (this.curent < this.last) {
+//                 this.curent = this .curent + 500;
+//                 return {done: false, value: this.curent};
+//             } else {
+//                 return {done: true};
+//             }
+//         }
+//     };
+// };
+
+// const iterator = salaries[Symbol.iterator]();
+// console.log(iterator.next());
+
+// // for (let res of salaries) {
+// //     console.log(res);
+// // }
+
+// ################################ map() ################################
 const user = {
     name: 'Alex',
     surname: 'Smith',
@@ -2509,67 +2583,55 @@ const user = {
         console.log(`${this.name} ${this.surname}`);
     }
 };
-// in
-// for (const key in user) {
-//     console.log(user[key]);
+
+const userMap = new Map(Object.entries(user));
+
+
+const newUserObj = Object.fromEntries(userMap);
+console.log(newUserObj);
+
+const shops =[
+    {rice: 500},
+    {oil: 200},
+    {bread: 50}
+];
+
+const budget = [5000,15000, 25000];
+
+const map = new Map([
+    [{paper: 400}, 8000]
+]);
+
+shops.forEach((shop, i) => {
+    map.set(shop, budget[i]);
+});
+
+// map.set(shops[0], 5000);
+// map.set(shops[1], 15000);
+// map.set(shops[2], 25000);
+
+console.log(map);
+// console.log(map.get(shops[0]));
+// console.log(map.has(shops[0]));
+// map.delete(key);
+// map.clear();
+// map.size;
+// map.keys()
+
+// const goods = [];
+// for (let shop of map.keys()) {
+//     goods.push(Object.keys(shop)[0]);
+// }
+// console.log(goods);
+
+// for (let price of map.values()) {
+//     console.log(price);
 // }
 
-// const arr = ['b', 'a', 'c'];
-
-// for (const key in arr) {
-//     console.log(arr[key]);
+// for (let [shop, price] of map.entries()) {
+//     console.log(price, shop);
 // }
 
-// const str = 'string';
-
-// for (const key in str) {
-//     console.log(str[key]);
-// }
-// of
-// for (const key of user) {
-//     console.log(key);
-// }
-
-const arr = ['b', 'a', 'c'];
-Array.prototype.someMethod = function() {};
-for (const key of arr) {
-    console.log(key);
-}
-
-// const str = 'string';
-
-// for (const key of str) {
-//     console.log(key);
-// }
-
-const salaries = {
-    jonh: 500,
-    ivan: 1000,
-    ann: 5000,
-    sayHello: function() {
-        console.log('Hello');
-    }
-};
-
-salaries[Symbol.iterator] = function() {
-    return {
-        curent: this.jonh,
-        last: this.ann,
-
-        next() {
-            if (this.curent < this.last) {
-                this.curent = this .curent + 500;
-                return {done: false, value: this.curent}
-            } else {
-                return {done: true};
-            }
-        }
-    };
-};
-
-const iterator = salaries[Symbol.iterator]();
-console.log(iterator.next());
-
-// for (let res of salaries) {
-//     console.log(res);
-// }
+// map.forEach((value, key, map) => {
+//     console.log(key, value);
+// });
