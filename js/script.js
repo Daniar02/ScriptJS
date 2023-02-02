@@ -2462,7 +2462,7 @@ P.S. Функции вызывать не обязательно*/
 
 // // console.log(Array.from(boxesGet));
 
-// ################################ Тип данных Symbol ################################\
+// ################################ Тип данных Symbol ################################
 // // let id = Symbol('id');
 
 // // const obj = {
@@ -2499,3 +2499,77 @@ P.S. Функции вызывать не обязательно*/
 // myAwesomeDB.id = '323232';
 // console.log(myAwesomeDB[Symbol.for('id')]);
 // console.log(myAwesomeDB);
+
+// ################################ Итерируемые конструкции ################################
+const user = {
+    name: 'Alex',
+    surname: 'Smith',
+    birthday: '20/04/1993',
+    showMyPublicData: function() {
+        console.log(`${this.name} ${this.surname}`);
+    }
+};
+// in
+// for (const key in user) {
+//     console.log(user[key]);
+// }
+
+// const arr = ['b', 'a', 'c'];
+
+// for (const key in arr) {
+//     console.log(arr[key]);
+// }
+
+// const str = 'string';
+
+// for (const key in str) {
+//     console.log(str[key]);
+// }
+// of
+// for (const key of user) {
+//     console.log(key);
+// }
+
+const arr = ['b', 'a', 'c'];
+Array.prototype.someMethod = function() {};
+for (const key of arr) {
+    console.log(key);
+}
+
+// const str = 'string';
+
+// for (const key of str) {
+//     console.log(key);
+// }
+
+const salaries = {
+    jonh: 500,
+    ivan: 1000,
+    ann: 5000,
+    sayHello: function() {
+        console.log('Hello');
+    }
+};
+
+salaries[Symbol.iterator] = function() {
+    return {
+        curent: this.jonh,
+        last: this.ann,
+
+        next() {
+            if (this.curent < this.last) {
+                this.curent = this .curent + 500;
+                return {done: false, value: this.curent}
+            } else {
+                return {done: true};
+            }
+        }
+    };
+};
+
+const iterator = salaries[Symbol.iterator]();
+console.log(iterator.next());
+
+// for (let res of salaries) {
+//     console.log(res);
+// }
