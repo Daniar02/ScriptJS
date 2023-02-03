@@ -2637,13 +2637,13 @@ P.S. Функции вызывать не обязательно*/
 // // });
 
 // ################################ Set() ################################
-const arr = ['Alex', 'Ann', 'Oleg', 'Alex'];
+// const arr = ['Alex', 'Ann', 'Oleg', 'Alex'];
 
-function unique(arr) {
-    return Array.from(new Set(arr));
-}
+// function unique(arr) {
+//     return Array.from(new Set(arr));
+// }
 
-console.log(unique(arr));
+// console.log(unique(arr));
 
 // const set = new Set(arr);
 
@@ -2669,3 +2669,15 @@ console.log(unique(arr));
 // console.log(set.keys());
 // console.log(set.entries());
 
+// ################################ BigInt.() ################################
+// const bigint = 123123123313313131131131133n;
+
+const sameBigint = BigInt(123123123313313131131131133);
+
+console.log(2n === 4);
+
+let bigint = 1n;
+let number = 2;
+
+console.log(bigint + BigInt(number));
+console.log(Number(bigint) + number);
